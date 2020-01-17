@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper,Scissors Game </title>
+    <meta charset='UTF-8'/>
+  </head>
+  <body>
+    <h1>Lets Play Rock, Paper, Scissors</h1>
+    <script>
+      function computerPlay() {
+        const values = ['Rock', 'Paper', 'Scissors'];
+        let num = Math.floor(Math.random() * values.length);
+        return values[num];
+      }
+      console.log(computerPlay());
+    </script>
+  </body>
+</html>
