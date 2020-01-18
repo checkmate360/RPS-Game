@@ -11,8 +11,17 @@
       function game() {
         for(i=0; i<5; i++){
           let userInput= prompt('What do you play');
-
+          userInput = validateInput(userInput);
+          alert(playRound(computerPlay(),userInput));
         }
+      }
+      function validateInput(userInput) {
+        let ui = userInput.toLowerCase();
+        if(!(ui==='rock' || ui==='paper' || ui==='scissors')) {
+          let inputAgain = prompt('Please enter a valid value');
+          ui = validateInput(inputAgain);
+        }
+        return ui;
       }
       function computerPlay() {
         const values = ['Rock', 'Paper', 'Scissors'];
